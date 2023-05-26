@@ -11,6 +11,7 @@
 	<groupId>com.feuji</groupId>
 	<artifactId>common-model</artifactId>
 	<version>0.0.1</version>
+	<name>common-model</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -51,7 +52,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>-->
-		
+		<finalName>common-model</finalName>
 	</build>
 
 </project>
