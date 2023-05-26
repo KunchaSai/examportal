@@ -1,4 +1,5 @@
-FROM openjdk:17
+FROM eclipse-temurin:17-jdk-alpine
 VOLUME /tmp
-ADD target/common-model.jar common-model.jar
-ENTRYPOINT [ "java","-jar","/common-model.jar" ]
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} common-model
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /common-model.jar"]
